@@ -1,8 +1,8 @@
 <?php
 
-namespace RomanNumerals\Test;
+namespace FizzBuzz\Test;
 
-use RomanNumerals\FizzBuzz;
+use FizzBuzz\FizzBuzz;
 
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
