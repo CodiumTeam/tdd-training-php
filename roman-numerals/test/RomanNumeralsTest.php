@@ -4,7 +4,7 @@ namespace RomanNumerals\Test;
 
 use RomanNumerals\RomanNumerals;
 
-class FizzBuzzTest extends \PHPUnit_Framework_TestCase
+class RomanNumeralsTest extends \PHPUnit_Framework_TestCase
 {
     /** @test */
     public function change_me()

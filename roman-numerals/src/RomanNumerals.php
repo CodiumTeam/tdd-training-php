@@ -2,7 +2,7 @@
 
 namespace RomanNumerals;
 
-class FizzBuzz
+class RomanNumerals
 {
 
     /**
