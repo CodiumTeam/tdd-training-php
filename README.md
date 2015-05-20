@@ -15,3 +15,5 @@ Good kata to start doing TDD
 Easy kata to continue with TDD
 ## Gilded Rose
 Refactoring kata
+## Bank
+Good kata to learn indirect input and output

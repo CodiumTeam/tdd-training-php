@@ -4,29 +4,9 @@ Develop a program to manage the transactions of a bank account.
 The transactions are: deposit money into the account, and withdraw from the account. 
 
 We need to be able to print into the console the result.
-##Acceptance test
-
-    /** @test */
-    public function should_print_statements_containing_all_transactions()
-    {
-        $consoleProphecy = $this->prophesize('KataBank\Console');
-
-        $account = new AccountService();
-        $account->deposit(1000);
-        $account->withdraw(100);
-        $account->deposit(500);
-
-        $account->printStatements();
-
-        $consoleProphecy->printLine()->shouldBeCalled("DATE | AMOUNT | BALANCE");
-        $consoleProphecy->printLine()->shouldBeCalled("10/04/2014 | 500 | 1400");
-        $consoleProphecy->printLine()->shouldBeCalled("02/04/2014 | -100 | 900");
-        $consoleProphecy->printLine()->shouldBeCalled("01/04/2014 | 1000 | 1000");
-    }
-## Main class definition
-### Requirement
+## Requirement
 You cannot change the signature of the public interface (the class AccountService).
-### Code
+## Code
 	class AccountService {
       /**
        * Add an amount into the account.
@@ -54,3 +34,22 @@ You cannot change the signature of the public interface (the class AccountServic
       {
       }
 	}
+##Acceptance test
+
+    /** @test */
+    public function should_print_statements_containing_all_transactions()
+    {
+        $consoleProphecy = $this->prophesize('KataBank\Console');
+
+        $account = new AccountService();
+        $account->deposit(1000);
+        $account->withdraw(100);
+        $account->deposit(500);
+
+        $account->printStatements();
+
+        $consoleProphecy->printLine()->shouldBeCalled("DATE | AMOUNT | BALANCE");
+        $consoleProphecy->printLine()->shouldBeCalled("10/04/2014 | 500 | 1400");
+        $consoleProphecy->printLine()->shouldBeCalled("02/04/2014 | -100 | 900");
+        $consoleProphecy->printLine()->shouldBeCalled("01/04/2014 | 1000 | 1000");
+    }
