@@ -48,8 +48,8 @@ You cannot change the signature of the public interface (the class AccountServic
 
         $account->printStatements();
 
-        $consoleProphecy->printLine()->shouldBeCalled("DATE | AMOUNT | BALANCE");
-        $consoleProphecy->printLine()->shouldBeCalled("10/04/2014 | 500 | 1400");
-        $consoleProphecy->printLine()->shouldBeCalled("02/04/2014 | -100 | 900");
-        $consoleProphecy->printLine()->shouldBeCalled("01/04/2014 | 1000 | 1000");
+        $consoleProphecy->printLine("DATE | AMOUNT | BALANCE")->shouldBeCalled();
+        $consoleProphecy->printLine("10/04/2014 | 500 | 1400")->shouldBeCalled();
+        $consoleProphecy->printLine("02/04/2014 | -100 | 900")->shouldBeCalled();
+        $consoleProphecy->printLine("01/04/2014 | 1000 | 1000")->shouldBeCalled();
     }
