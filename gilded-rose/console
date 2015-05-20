@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use GildedRose\GildedRoseCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new GildedRoseCommand());
+$application->run();
