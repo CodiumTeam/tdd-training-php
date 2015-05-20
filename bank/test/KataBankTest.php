@@ -10,8 +10,9 @@ class KataBankTest extends ProphecyTestCase
     /** @test */
     public function should_print_statements_containing_all_transactions()
     {
+        $this->markTestIncomplete('Not yet');
         $consoleProphecy = $this->prophesize('KataBank\Console');
-
+        $console = $consoleProphecy->reveal();
         $account = new AccountService();
         $account->deposit(1000);
         $account->withdraw(100);
