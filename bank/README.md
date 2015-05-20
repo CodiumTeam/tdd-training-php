@@ -39,9 +39,9 @@ You cannot change the signature of the public interface (the class AccountServic
     /** @test */
     public function should_print_statements_containing_all_transactions()
     {
+        $this->markTestIncomplete('Not yet');
         $consoleProphecy = $this->prophesize('KataBank\Console');
-
-        $account = new AccountService();
+        $account = new AccountService($consoleProphecy->reveal());
         $account->deposit(1000);
         $account->withdraw(100);
         $account->deposit(500);
