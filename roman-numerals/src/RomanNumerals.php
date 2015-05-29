@@ -1,6 +1,6 @@
 <?php
 
-namespace FizzBuzz;
+namespace RomanNumerals;
 
 class RomanNumerals
 {
