@@ -1,0 +1,12 @@
+{
+    "name": "password-validator",
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PasswordValidator\\": "src",
+            "PasswordValidator\\Test\\": "test"
+        }
+    }
+}
