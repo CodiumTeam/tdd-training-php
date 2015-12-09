@@ -23,11 +23,11 @@
 # Katas
 ## Fizz Buzz
 Good kata to start doing TDD
+## Gilded Rose
+Refactoring kata
 ## Roman numerals
 Easy kata to continue with TDD
 ## Password validator
 Easy kata to practice the importance of the test order.
-## Gilded Rose
-Refactoring kata
 ## Bank
 Good kata to learn indirect input and output

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace GildedRose\Test;
 
 use GildedRose\GildedRose;

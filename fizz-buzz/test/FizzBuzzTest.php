@@ -7,7 +7,7 @@ use FizzBuzz\FizzBuzz;
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
     /** @test */
-    public function change_me()
+    public function it_should_test_something()
     {
 
         $fizzBuzz = new FizzBuzz();

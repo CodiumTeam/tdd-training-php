@@ -3,9 +3,8 @@
 namespace KataBank\Test;
 
 use KataBank\AccountService;
-use Prophecy\PhpUnit\ProphecyTestCase;
 
-class KataBankTest extends ProphecyTestCase
+class KataBankTest extends \PHPUnit_Framework_TestCase
 {
     /** @test */
     public function should_print_statements_containing_all_transactions()
