@@ -1,0 +1,12 @@
+{
+    "name": "print-date",
+    "require-dev": {
+        "phpunit/phpunit": "4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "PrintDate\\": "src",
+            "PrintDate\\Test\\": "test"
+        }
+    }
+}
