@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "GildedRose\\": "src",
-            "GildedRose\\Test\\": "test"
+            "GildedRose\\Test\\": [
+		"test",
+		"test-solution"
+	     ]
         }
     },
     "require": {
