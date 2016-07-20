@@ -1,13 +1,15 @@
 {
     "name": "gilded-rose",
     "require-dev": {
-        "phpunit/phpunit": "4.1.*",
-        "phpspec/prophecy-phpunit": "~1.1"
+        "phpunit/phpunit": "4.8"
     },
     "autoload": {
         "psr-4": {
             "GildedRose\\": "src",
-            "GildedRose\\Test\\": "test"
+            "GildedRose\\Test\\": [
+		"test",
+		"test-solution"
+	     ]
         }
     },
     "require": {

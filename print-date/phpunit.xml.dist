@@ -26,8 +26,5 @@
         <testsuite name="My Test Suite">
             <directory>./test</directory>
         </testsuite>
-        <testsuite name="Solution">
-            <directory>./test-solution</directory>
-        </testsuite>
     </testsuites>
 </phpunit>

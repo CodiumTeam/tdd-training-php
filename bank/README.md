@@ -53,3 +53,35 @@ You cannot change the signature of the public interface (the class AccountServic
         $consoleProphecy->printLine("02/04/2014 | -100 | 900")->shouldBeCalled();
         $consoleProphecy->printLine("01/04/2014 | 1000 | 1000")->shouldBeCalled();
     }
+## Tools
+
+[Prophecy](https://github.com/phpspec/prophecy). Mocking library. 
+
+### Example of Mock	
+	/**
+     * @test
+     */
+    public function shouldUseTheExternalCollaborator()
+    {
+        $myCollaboratorProphecy = $this->prophesize('Collaborator');
+        /** @var Collaborator $collaborator */
+        $collaborator = $myCollaboratorProphecy->reveal();
+        $myClass = new MyClass($collaborator);
+        $myClass->run();
+        $myCollaboratorProphecy->collaborate()->shouldBeCalled();
+    }
+### Example of Stub    
+    /**
+     * @test
+     */
+    public function shouldReturnTheCollaboratorResponse()
+    {
+        $myCollaboratorProphecy = $this->prophesize('Collaborator');
+        $collaboratorResponse = 'collaborator response';
+        $myCollaboratorProphecy->collaborate()->willReturn($collaboratorResponse);
+        /** @var Collaborator $collaborator */
+        $collaborator = $myCollaboratorProphecy->reveal();
+        $myClass = new MyClass($collaborator);
+        $response = $myClass->run();
+        $this->assertEquals($collaboratorResponse, $response);
+    }
