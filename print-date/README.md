@@ -18,12 +18,14 @@ How to use Prophecy to generate the doubles.
      */
     public function shouldUseTheExternalCollaborator()
     {
-        $myCollaboratorProphecy = $this->prophesize('Collaborator');
+        $myCollaboratorProphecy = $this->prophesize(Collaborator::class);
         /** @var Collaborator $collaborator */
         $collaborator = $myCollaboratorProphecy->reveal();
         $myClass = new MyClass($collaborator);
+        
         $myClass->run();
-        $myCollaboratorProphecy->collaborate()->shouldBeCalled();
+        
+        $myCollaboratorProphecy->collaborate()->shouldHaveBeCalled();
     }
 ### Example of Stub    
     /**
@@ -31,12 +33,14 @@ How to use Prophecy to generate the doubles.
      */
     public function shouldReturnTheCollaboratorResponse()
     {
-        $myCollaboratorProphecy = $this->prophesize('Collaborator');
+        $myCollaboratorProphecy = $this->prophesize(Collaborator::class);
         $collaboratorResponse = 'collaborator response';
         $myCollaboratorProphecy->collaborate()->willReturn($collaboratorResponse);
         /** @var Collaborator $collaborator */
         $collaborator = $myCollaboratorProphecy->reveal();
         $myClass = new MyClass($collaborator);
+        
         $response = $myClass->run();
+        
         $this->assertEquals($collaboratorResponse, $response);
     }
