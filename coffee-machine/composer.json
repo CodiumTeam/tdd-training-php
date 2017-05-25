@@ -1,0 +1,16 @@
+{
+    "name": "kata-coffee-machine",
+    "require-dev": {
+        "phpunit/phpunit": "4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoffeeMachine\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoffeeMachine\\Tests\\": "tests"
+        }
+    }
+}
