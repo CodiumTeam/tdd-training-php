@@ -17,6 +17,9 @@ class GildedRoseTest extends TestCase
         /** @var Item[] $items */
         $items = array(new Item("aName", 10, 20));
         $gildedRose = new GildedRose($items);
-        $this->assertEquals("aName", $items[0]->name);
+
+        $gildedRose->update_quality();
+
+        $this->assertEquals(9, $items[0]->sell_in);
     }
 }
