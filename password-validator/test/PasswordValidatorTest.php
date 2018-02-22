@@ -3,8 +3,9 @@
 namespace PasswordValidator\Test;
 
 use PasswordValidator\PasswordValidator;
+use PHPUnit\Framework\TestCase;
 
-class PasswordValidatorTest extends \PHPUnit_Framework_TestCase
+class PasswordValidatorTest extends TestCase
 {
     /** @test */
     public function change_me()
