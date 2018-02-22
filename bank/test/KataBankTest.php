@@ -3,8 +3,9 @@
 namespace KataBank\Test;
 
 use KataBank\AccountService;
+use PHPUnit\Framework\TestCase;
 
-class KataBankTest extends \PHPUnit_Framework_TestCase
+class KataBankTest extends TestCase
 {
     /** @test */
     public function should_print_statements_containing_all_transactions()
