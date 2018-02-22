@@ -3,6 +3,7 @@
 namespace GildedRose\Test;
 
 use GildedRose\GildedRose;
+use GildedRose\Item;
 
 class GildedRoseTest extends \PHPUnit_Framework_TestCase
 {
@@ -12,8 +13,9 @@ class GildedRoseTest extends \PHPUnit_Framework_TestCase
      */
     public function changeMe()
     {
-        $items = array();
+        /** @var Item[] $items */
+        $items = array(new Item("aName", 10, 20));
         $gildedRose = new GildedRose($items);
-        $this->assertEquals(null, $gildedRose);
+        $this->assertEquals("aName", $items[0]->name);
     }
 }
