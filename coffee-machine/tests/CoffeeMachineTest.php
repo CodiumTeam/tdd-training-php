@@ -3,8 +3,9 @@
 namespace CoffeeMachine\Tests;
 
 use CoffeeMachine\CoffeeMachine;
+use PHPUnit\Framework\TestCase;
 
-class CoffeeMachineTest extends \PHPUnit_Framework_TestCase
+class CoffeeMachineTest extends TestCase
 {
     /** @test */
     public function xxx() {
