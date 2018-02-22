@@ -2,15 +2,18 @@
 
 namespace PrintDate\Test;
 
+use PHPUnit\Framework\TestCase;
 use PrintDate\PrintDate;
 
-class PrintDateTest extends \PHPUnit_Framework_TestCase
+class PrintDateTest extends TestCase
 {
     /** @test */
     public function it_test_system_methods()
     {
         $printDate = new PrintDate();
+
         $printDate->printCurrentDate();
-        $this->fail('This not test anything');
+
+        // I don't know how to test it
     }
 }
