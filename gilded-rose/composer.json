@@ -10,6 +10,7 @@
         }
     },
     "require": {
-        "symfony/console": "~2.6"
+        "symfony/console": "~3",
+        "infection/infection": "^0.11.4"
     }
 }
