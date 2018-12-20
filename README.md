@@ -29,5 +29,5 @@ Refactoring kata
 Easy kata to practice the importance of the test order.
 ## Print date
 Kata to start practicing with mocks and stubs.
-## Bank
-Good kata to learn indirect input and output
+## Coffee Machine
+Good kata to practice outside-in TDD.
