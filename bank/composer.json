@@ -1,12 +1,16 @@
 {
     "name": "kata-bank",
+    "require": {
+        "php": "^7.1"
+    },
     "require-dev": {
-        "phpunit/phpunit": "^6"
+        "phpunit/phpunit": "^7",
+        "infection/infection": "^0.12.2"
     },
     "autoload": {
         "psr-4": {
             "KataBank\\": "src",
-            "KataBank\\Test\\": "test"
+            "KataBank\\Tests\\": "tests"
         }
     }
 }

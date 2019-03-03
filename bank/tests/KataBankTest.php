@@ -1,6 +1,6 @@
 <?php
 
-namespace KataBank\Test;
+namespace KataBank\Tests;
 
 use KataBank\AccountService;
 use PHPUnit\Framework\TestCase;
