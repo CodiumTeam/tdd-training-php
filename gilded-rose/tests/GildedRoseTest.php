@@ -8,10 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class GildedRoseTest extends TestCase
 {
-
-    /**
-     * @test
-     */
+    /** @test */
     public function changeMe()
     {
         /** @var Item[] $items */
