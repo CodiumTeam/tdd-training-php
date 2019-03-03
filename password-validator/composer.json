@@ -1,12 +1,16 @@
 {
     "name": "password-validator",
+    "require": {
+        "php": "^7.1"
+    },
     "require-dev": {
-        "phpunit/phpunit": "^6"
+        "phpunit/phpunit": "^7.1",
+        "infection/infection": "^0.12.2"
     },
     "autoload": {
         "psr-4": {
             "PasswordValidator\\": "src",
-            "PasswordValidator\\Test\\": "test"
+            "PasswordValidator\\Test\\": "tests"
         }
     }
 }
