@@ -1,12 +1,15 @@
 {
     "name": "fizz-buzz",
+    "require": {
+        "php": "^7.1"
+    },
     "require-dev": {
-        "phpunit/phpunit": "^6"
+        "phpunit/phpunit": "^7"
     },
     "autoload": {
         "psr-4": {
             "FizzBuzz\\": "src",
-            "FizzBuzz\\Test\\": "test"
+            "FizzBuzz\\Test\\": "tests"
         }
     }
 }

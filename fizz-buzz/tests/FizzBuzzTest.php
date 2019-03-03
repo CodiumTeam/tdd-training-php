@@ -10,8 +10,10 @@ class FizzBuzzTest extends TestCase
     /** @test */
     public function it_should_test_something()
     {
-
         $fizzBuzz = new FizzBuzz();
-        $this->assertTrue($fizzBuzz->changeMe());
+
+        $currentValue = $fizzBuzz->changeMe();
+
+        $this->assertTrue($currentValue);
     }
 }
