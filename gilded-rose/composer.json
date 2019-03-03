@@ -10,7 +10,7 @@
     "autoload": {
         "psr-4": {
             "GildedRose\\": "src",
-            "GildedRose\\Test\\": "test"
+            "GildedRose\\Tests\\": "tests"
         }
     }
 }

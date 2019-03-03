@@ -1,6 +1,6 @@
 <?php
 
-namespace GildedRose\Test;
+namespace GildedRose\Tests;
 
 use GildedRose\GildedRose;
 use GildedRose\Item;
