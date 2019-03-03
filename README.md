@@ -27,3 +27,5 @@ Kata to practice tests doubles
 Kata to start practicing with mocks and stubs.
 ## Coffee Machine
 Good kata to practice outside-in TDD.
+## Kata bank
+Good kata to practice outside-in TDD.
