@@ -7,8 +7,9 @@ dependencies:
 .PHONY: tests
 tests:
 	./vendor/bin/phpunit
+.PHONY: coverage
 coverage:
-	./vendor/bin/phpunit --coverage-text
+	./vendor/bin/phpunit --coverage-html coverage
 
 # Docker commands
 docker-build:
