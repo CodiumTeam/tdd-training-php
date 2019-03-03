@@ -44,3 +44,8 @@ How to use Prophecy to generate the doubles.
         
         $this->assertEquals($collaboratorResponse, $response);
     }
+    
+## Authors
+Luis Rovirosa [@luisrovirosa](https://www.twitter.com/luisrovirosa)
+
+Jordi Anguela [@jordianguela](https://www.twitter.com/jordianguela)

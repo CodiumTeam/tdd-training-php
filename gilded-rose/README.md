@@ -41,3 +41,6 @@ Important files
 ===============
 - Tests file test/GildedRoseTest
 - Code: src/GildedRose
+
+# Credits
+Thanks to [Emily Bache](https://github.com/emilybache) for crafting this kata.
