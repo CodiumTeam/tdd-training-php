@@ -17,6 +17,8 @@ Second option: I already have installed docker
 # Katas
 ## Fizz Buzz
 Good kata to start doing TDD
+## Roman numerals
+Easy kata to continue with TDD
 ## Gilded Rose
 Refactoring kata
 ## Password validator
