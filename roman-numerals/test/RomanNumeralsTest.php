@@ -2,9 +2,10 @@
 
 namespace RomanNumerals\Test;
 
+use PHPUnit\Framework\TestCase;
 use RomanNumerals\RomanNumerals;
 
-class RomanNumeralsTest extends \PHPUnit_Framework_TestCase
+class RomanNumeralsTest extends TestCase
 {
     /** @test */
     public function change_me()
