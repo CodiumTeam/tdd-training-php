@@ -9,7 +9,7 @@ tests:
 	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap vendor/bin/phpunit
 .PHONY: coverage
 coverage:
-	./vendor/bin/phpunit --coverage-html coverage
+	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap vendor/bin/phpunit --coverage-html coverage
 mutants:
 	./vendor/bin/infection
 
