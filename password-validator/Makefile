@@ -11,7 +11,7 @@ tests:
 coverage:
 	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap vendor/bin/phpunit --coverage-html coverage
 mutants:
-	./vendor/bin/infection
+	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap vendor/bin/infection
 
 # Docker commands
 docker-build:
