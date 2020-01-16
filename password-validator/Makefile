@@ -16,14 +16,14 @@ mutants:
 # Docker commands
 docker-build:
 	docker build -t php-docker-bootstrap .
-	@docker run -v $(shell pwd):/opt/project php-docker-bootstrap make dependencies
+	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap make dependencies
 
 docker-tests:
-	@docker run -v $(shell pwd):/opt/project php-docker-bootstrap make tests
+	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap make tests
 docker-coverage:
-	@docker run -v $(shell pwd):/opt/project php-docker-bootstrap make coverage
+	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap make coverage
 docker-mutants:
-	@docker run -v $(shell pwd):/opt/project php-docker-bootstrap phpdbg -qrr ./vendor/bin/infection
+	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap phpdbg -qrr ./vendor/bin/infection
 
 define HELP
 # Local commands
