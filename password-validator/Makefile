@@ -6,7 +6,7 @@ dependencies:
 	composer install
 .PHONY: tests
 tests:
-	./vendor/bin/phpunit
+	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap vendor/bin/phpunit
 .PHONY: coverage
 coverage:
 	./vendor/bin/phpunit --coverage-html coverage
