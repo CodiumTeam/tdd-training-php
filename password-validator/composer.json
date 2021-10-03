@@ -1,16 +1,21 @@
 {
-    "name": "password-validator",
+    "name": "codium-team/password-validator",
     "require": {
-        "php": "^7.1"
+        "php": "^7.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.1",
-        "infection/infection": "^0.12.2"
+        "phpunit/phpunit": "^9.5",
+        "infection/infection": "^0.25"
     },
     "autoload": {
         "psr-4": {
             "PasswordValidator\\": "src",
             "PasswordValidator\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.7"
         }
     }
 }
