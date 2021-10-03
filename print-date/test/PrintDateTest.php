@@ -1,14 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PrintDate\Test;
 
 use PHPUnit\Framework\TestCase;
 use PrintDate\PrintDate;
 
-class PrintDateTest extends TestCase
+final class PrintDateTest extends TestCase
 {
     /** @test */
-    public function it_test_system_methods()
+    public function it_test_system_methods(): void
     {
         $printDate = new PrintDate();
 

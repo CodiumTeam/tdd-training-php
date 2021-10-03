@@ -8,8 +8,11 @@ Be able to test printCurrentDate function.
 # Learnings
 How to build a Mock and Stub manually.
 
-How to use Prophecy to generate the doubles.
+How to use PHPUnit or Prophecy to generate the doubles.
+
 ## Tools
+[PHPUnit](https://phpunit.readthedocs.io/en/9.5/test-doubles.html). Testing Framework.
+
 [Prophecy](https://github.com/phpspec/prophecy). Mocking library. 
 
 ### Example of Mock	
