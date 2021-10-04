@@ -1,16 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace PasswordValidator\Test;
 
 use PasswordValidator\PasswordValidator;
 use PHPUnit\Framework\TestCase;
 
-class PasswordValidatorTest extends TestCase
+final class PasswordValidatorTest extends TestCase
 {
     /** @test */
-    public function change_me()
+    public function change_me(): void
     {
         $passwordValidator = new PasswordValidator();
-        $this->assertTrue($passwordValidator->changeMe());
+
+        self::assertTrue($passwordValidator->changeMe());
     }
 }
