@@ -1,68 +1,64 @@
 ## Goal
+
 Develop a program to manage the transactions of a bank account.
 
-The transactions are: deposit money into the account, and withdraw from the account. 
+The transactions are: deposit money into the account, and withdraw from the account.
 
 We need to be able to print into the console the result.
+
 ## Requirement
-You cannot change the signature of the public interface (the class AccountService).
+
+You cannot change the signature of the public interface (the class AccountService). This means:
+
+- You cannot change the signature of the existing public methods
+- You cannot add new public methods
+
 ## Code
-	class AccountService {
-      /**
-       * Add an amount into the account.
-       * Do not return any value
-       * @param int $amount
-       */
-      public function deposit($amount)
-      {
-      }
 
-      /**
-       * Remove an amount from the account.
-       * Do not return any value
-       * @param int $amount
-       */
-      public function withdraw($amount)
-      {
-      }
+```php
+final class AccountService 
+{
+  public function deposit(int $amount): void {}
 
-      /**
-       * Print the statements containing all the transactions in the console
-       * Do not return any value
-       */
-      public function printStatements()
-      {
-      }
-	}
-##Acceptance test
+  public function withdraw(int $amount): void {}
 
-    /** @test */
-    public function should_print_statements_containing_all_transactions()
-    {
-        $this->markTestIncomplete('Not yet');
-        $consoleProphecy = $this->prophesize('KataBank\Console');
-        $account = new AccountService($consoleProphecy->reveal());
-        $account->deposit(1000);
-        $account->withdraw(100);
-        $account->deposit(500);
+  public function printStatements(): void {}
+}
+```
 
-        $account->printStatements();
+## Acceptance test
 
-        $consoleProphecy->printLine("DATE | AMOUNT | BALANCE")->shouldBeCalled();
-        $consoleProphecy->printLine("10/04/2014 | 500 | 1400")->shouldBeCalled();
-        $consoleProphecy->printLine("02/04/2014 | -100 | 900")->shouldBeCalled();
-        $consoleProphecy->printLine("01/04/2014 | 1000 | 1000")->shouldBeCalled();
-    }
+```
+Given a client makes a deposit of 1000 on 10-01-2012  
+And a deposit of 2000 on 13-01-2012  
+And a withdrawal of 500 on 14-01-2012  
+When she prints her bank statement  
+Then she would see  
+date       || credit   || debit    || balance
+14/01/2012 ||          || 500.00   || 2500.00
+13/01/2012 || 2000.00  ||          || 3000.00
+10/01/2012 || 1000.00  ||          || 1000.00
+```
+
 ## Tools
 
-[Prophecy](https://github.com/phpspec/prophecy). Mocking library. 
+[PHPUnit](https://github.com/sebastianbergmann/phpunit). The PHP Unit Testing framework.
+[Prophecy](https://github.com/phpspec/prophecy). Mocking library.
 
-### Example of Mock	
-	/**
-     * @test
-     */
-    public function shouldUseTheExternalCollaborator()
+### Example of Mock
+
+```php
+    /** @test */
+    public function should_use_the_external_collaborator(): void
     {
+        # PHPUnit
+        $collaborator = $this->createMock(Collaborator::class);
+        $collaborator->expects(self::once())->method('collaborate');
+        $myClass = new MyClass($collaborator);
+        $myClass->run();
+
+        # ------------------------------------------------
+        
         $myCollaboratorProphecy = $this->prophesize('Collaborator');
         /** @var Collaborator $collaborator */
         $collaborator = $myCollaboratorProphecy->reveal();
@@ -70,12 +66,26 @@ You cannot change the signature of the public interface (the class AccountServic
         $myClass->run();
         $myCollaboratorProphecy->collaborate()->shouldBeCalled();
     }
-### Example of Stub    
-    /**
-     * @test
-     */
-    public function shouldReturnTheCollaboratorResponse()
+```
+
+### Example of Stub
+
+```php
+    /** @test */
+    public function should_return_the_collaborator_response(): void
     {
+        # PHPUnit
+        $collaborator = $this->createStub(Collaborator::class);
+        $collaboratorResponse = 'collaborator response';
+        $collaborator->method('collaborate')->willReturn($collaboratorResponse);
+        $myClass = new MyClass($collaborator);
+        
+        $response = $myClass->run();
+        
+        self::assertEquals($collaboratorResponse, $response);
+    
+        # ------------------------------------------------
+
         $myCollaboratorProphecy = $this->prophesize('Collaborator');
         $collaboratorResponse = 'collaborator response';
         $myCollaboratorProphecy->collaborate()->willReturn($collaboratorResponse);
@@ -85,3 +95,8 @@ You cannot change the signature of the public interface (the class AccountServic
         $response = $myClass->run();
         $this->assertEquals($collaboratorResponse, $response);
     }
+```
+
+## Original
+
+Original idea from Sandro Mancuso: https://github.com/sandromancuso/Bank-kata/
