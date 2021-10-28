@@ -1,32 +1,29 @@
 <?php
 
+declare(strict_types=1);
+
 namespace KataBank;
 
 class AccountService
 {
     /**
      * Add an amount to the account.
-     * Do not return any value
-     * @param int $amount
      */
-    public function deposit($amount)
+    public function deposit(int $amount): void
     {
     }
 
     /**
      * Remove an amount from the account.
-     * Do not return any value
-     * @param int $amount
      */
-    public function withdraw($amount)
+    public function withdraw(int $amount): void
     {
     }
 
     /**
      * Print the statements containing all the transactions in the console
-     * Do not return any value
      */
-    public function printStatements()
+    public function printStatements(): void
     {
     }
 }
