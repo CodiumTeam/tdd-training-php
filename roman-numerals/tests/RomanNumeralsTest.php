@@ -28,6 +28,7 @@ class RomanNumeralsTest extends TestCase
             [50, "L"],
             [90, "XC"],
             [100, "C"],
+            [400, "CD"],
         ];
     }
 
