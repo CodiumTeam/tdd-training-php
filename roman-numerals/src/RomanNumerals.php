@@ -13,13 +13,7 @@ class RomanNumerals
         if ($decimal === 9) {
             return "IX";
         }
-        if ($decimal === 8) {
-            return "V" . $this->convertToRoman($decimal - 5);
-        }
-        if ($decimal === 7) {
-            return "V" . $this->convertToRoman($decimal - 5);
-        }
-        if ($decimal === 6) {
+        if ($decimal >= 6) {
             return "V" . $this->convertToRoman($decimal - 5);
         }
         if ($decimal === 5) {
