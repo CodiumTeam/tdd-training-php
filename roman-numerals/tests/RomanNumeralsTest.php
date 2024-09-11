@@ -9,10 +9,10 @@ use RomanNumerals\RomanNumerals;
 class RomanNumeralsTest extends TestCase
 {
     #[Test]
-    public function change_me(): void
+    public function one_is_I(): void
     {
         $romanNumerals = new RomanNumerals();
 
-        $this->assertEquals("", $romanNumerals->changeMe());
+        $this->assertEquals("I", $romanNumerals->convertToRoman(1));
     }
 }

@@ -5,8 +5,8 @@ namespace RomanNumerals;
 class RomanNumerals
 {
 
-    public function changeMe(): string
+    public function convertToRoman(int $decimal): string
     {
-        return "";
+        return "I";
     }
 }
