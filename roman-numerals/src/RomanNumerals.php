@@ -23,10 +23,10 @@ class RomanNumerals
             return "IV";
         }
         if ($decimal === 3) {
-            return "III";
+            return "I" . $this->convertToRoman(2);
         }
         if ($decimal === 2) {
-            return "II";
+            return "I" . $this->convertToRoman(1);
         }
         return "I";
     }
