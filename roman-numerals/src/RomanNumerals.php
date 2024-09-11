@@ -7,8 +7,14 @@ class RomanNumerals
 
     public function convertToRoman(int $decimal): string
     {
-        if ($decimal >= 10) {
-            return "X" . $this->convertToRoman($decimal - 10);
+        $conversion = [
+            10 => "X",
+        ];
+
+        foreach ($conversion as $number => $roman) {
+            if ($decimal >= $number) {
+                return $roman . $this->convertToRoman($decimal - $number);
+            }
         }
         if ($decimal >= 9) {
             return "IX" . $this->convertToRoman($decimal - 9);
