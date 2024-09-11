@@ -8,6 +8,7 @@ class RomanNumerals
     public function convertToRoman(int $decimal): string
     {
         $conversion = [
+            500 => "D",
             400 => "CD",
             100 => "C",
             90 => "XC",
