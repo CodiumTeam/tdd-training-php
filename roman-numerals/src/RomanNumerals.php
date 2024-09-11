@@ -23,11 +23,14 @@ class RomanNumerals
             return "IV";
         }
         if ($decimal === 3) {
-            return "I" . $this->convertToRoman(2);
+            return "I" . $this->convertToRoman($decimal - 1);
         }
-        if ($decimal === 2) {
-            return "I" . $this->convertToRoman(1);
+        if ($decimal >= 2) {
+            return "I" . $this->convertToRoman($decimal - 1);
         }
-        return "I";
+        if ($decimal === 1) {
+            return "I";
+        }
+        return "";
     }
 }
