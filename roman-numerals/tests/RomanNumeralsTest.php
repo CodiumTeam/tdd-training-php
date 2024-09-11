@@ -15,4 +15,12 @@ class RomanNumeralsTest extends TestCase
 
         $this->assertEquals("I", $romanNumerals->convertToRoman(1));
     }
+
+    #[Test]
+    public function two_is_II(): void
+    {
+        $romanNumerals = new RomanNumerals();
+
+        $this->assertEquals("II", $romanNumerals->convertToRoman(2));
+    }
 }
