@@ -2,33 +2,29 @@
 
 namespace RomanNumerals\Tests;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use RomanNumerals\RomanNumerals;
 
 class RomanNumeralsTest extends TestCase
 {
-    #[Test]
-    public function one_is_I(): void
+    public static function example_numbers(): array
     {
-        $romanNumerals = new RomanNumerals();
-
-        $this->assertEquals("I", $romanNumerals->convertToRoman(1));
+        return [
+            [1, "I"],
+            [2, "II"],
+            [3, "III"],
+        ];
     }
 
     #[Test]
-    public function two_is_II(): void
+    #[DataProvider('example_numbers')]
+    public function transform_decimal_numbers_to_roman(int $decimal, string $expectedRoman): void
     {
         $romanNumerals = new RomanNumerals();
 
-        $this->assertEquals("II", $romanNumerals->convertToRoman(2));
+        $this->assertEquals($expectedRoman, $romanNumerals->convertToRoman($decimal), "$decimal is $expectedRoman");
     }
 
-    #[Test]
-    public function three_is_III(): void
-    {
-        $romanNumerals = new RomanNumerals();
-
-        $this->assertEquals("III", $romanNumerals->convertToRoman(3));
-    }
 }
