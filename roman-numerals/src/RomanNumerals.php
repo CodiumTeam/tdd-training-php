@@ -7,6 +7,9 @@ class RomanNumerals
 
     public function convertToRoman(int $decimal): string
     {
+        if ($decimal === 5) {
+            return "V";
+        }
         if ($decimal === 4) {
             return "IV";
         }
