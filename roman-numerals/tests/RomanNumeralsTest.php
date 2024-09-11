@@ -22,6 +22,9 @@ class RomanNumeralsTest extends TestCase
             [8, "VIII"],
             [9, "IX"],
             [10, "X"],
+            [14, "XIV"],
+            [20, "XX"],
+            [40, "XL"],
         ];
     }
 
