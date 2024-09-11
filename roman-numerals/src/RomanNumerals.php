@@ -22,9 +22,6 @@ class RomanNumerals
         if ($decimal === 4) {
             return "IV";
         }
-        if ($decimal === 3) {
-            return "I" . $this->convertToRoman($decimal - 1);
-        }
         if ($decimal >= 2) {
             return "I" . $this->convertToRoman($decimal - 1);
         }
