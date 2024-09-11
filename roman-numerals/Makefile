@@ -6,10 +6,10 @@ dependencies:
 	composer install
 .PHONY: tests
 tests:
-	./vendor/bin/phpunit
+	./vendor/bin/phpunit --no-coverage
 .PHONY: coverage
 coverage:
-	./vendor/bin/phpunit --coverage-html coverage
+	./vendor/bin/phpunit --configuration phpunit.xml.dist
 
 # Docker commands
 docker-build:

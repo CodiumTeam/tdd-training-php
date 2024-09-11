@@ -2,12 +2,13 @@
 
 namespace RomanNumerals\Test;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use RomanNumerals\RomanNumerals;
 
 class RomanNumeralsTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function change_me()
     {
         $romanNumerals = new RomanNumerals();

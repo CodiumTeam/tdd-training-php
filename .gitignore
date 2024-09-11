@@ -2,4 +2,6 @@
 vendor
 composer.phar
 coverage
+.coverage-report
+.phpunit.result.cache
 /**/infection.log

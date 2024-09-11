@@ -1,15 +1,30 @@
 <phpunit
         bootstrap="vendor/autoload.php"
         colors="true"
+
 >
+    <php>
+        <ini name="memory_limit" value="512M"/>
+    </php>
     <testsuites>
         <testsuite name="All tests">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <directory>src</directory>
-        </whitelist>
-    </filter>
+    <source>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+
+    </source>
+    <coverage includeUncoveredFiles="true"
+              pathCoverage="true"
+              ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true">
+        <report>
+            <html outputDirectory=".coverage-report" />
+            <clover outputFile=".coverage-report/coverage.xml" />
+            <text outputFile=".coverage-report/coverage.txt" showUncoveredFiles="true" showOnlySummary="true"/>
+        </report>
+    </coverage>
 </phpunit>
