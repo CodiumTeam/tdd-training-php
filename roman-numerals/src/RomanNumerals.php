@@ -5,8 +5,8 @@ namespace RomanNumerals;
 class RomanNumerals
 {
 
-    public function changeMe()
+    public function changeMe(): string
     {
-        return true;
+        return "";
     }
 }
