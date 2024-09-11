@@ -23,4 +23,12 @@ class RomanNumeralsTest extends TestCase
 
         $this->assertEquals("II", $romanNumerals->convertToRoman(2));
     }
+
+    #[Test]
+    public function three_is_III(): void
+    {
+        $romanNumerals = new RomanNumerals();
+
+        $this->assertEquals("III", $romanNumerals->convertToRoman(3));
+    }
 }
