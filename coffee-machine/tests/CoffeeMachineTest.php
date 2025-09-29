@@ -3,13 +3,17 @@
 namespace CoffeeMachine\Tests;
 
 use CoffeeMachine\CoffeeMachine;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class CoffeeMachineTest extends TestCase
 {
-    /** @test */
-    public function xxx() {
+
+    #[Test]
+    public function xxx(): void
+    {
         new CoffeeMachine();
+
         $this->assertEquals(true, true);
     }
 }

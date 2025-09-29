@@ -2,10 +2,7 @@
 
 namespace CoffeeMachine;
 
-class DrinkMaker
+interface DrinkMaker
 {
-    public function execute($command)
-    {
-        // you don't have to modify this method
-    }
+    public function execute($command): void;
 }
