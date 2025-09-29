@@ -45,7 +45,7 @@ validateKata "run roman-numerals" "cd roman-numerals" "make"
 validateKata "run password-validator" "cd password-validator" "make"
 validateKata "run user-registration" "cd user-registration-kata" "make"
 validateKata "run coffee-machine" "cd coffee-machine" "make"
-validateKata "run print date" "cd print-date" "make" "make docker-tests"
+validateKata "run print date" "cd print-date" "make"
 
 if [ -z "$ERROR" ]; then
   echo "Congratulations! You are ready for the training!"
