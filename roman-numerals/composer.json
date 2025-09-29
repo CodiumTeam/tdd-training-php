@@ -1,15 +1,19 @@
 {
-    "name": "codium/roman_numerals",
-    "require": {
-        "php": "^8.2|^8.3"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^11"
-    },
-    "autoload": {
-        "psr-4": {
-            "RomanNumerals\\": "src",
-            "RomanNumerals\\Tests\\": "tests"
-        }
+  "name": "codium/roman_numerals",
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "autoload": {
+    "psr-4": {
+      "RomanNumerals\\": "src",
+      "RomanNumerals\\Tests\\": "tests"
     }
+  }
 }
