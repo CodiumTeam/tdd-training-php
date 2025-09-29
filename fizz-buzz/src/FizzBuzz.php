@@ -5,10 +5,7 @@ namespace FizzBuzz;
 class FizzBuzz
 {
 
-    /**
-     * @return bool
-     */
-    public function changeMe()
+    public function changeMe(): bool
     {
         return true;
     }

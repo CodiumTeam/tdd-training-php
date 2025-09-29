@@ -1,15 +1,19 @@
 {
-    "name": "fizz-buzz",
-    "require": {
-        "php": "^7.1"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7"
-    },
-    "autoload": {
-        "psr-4": {
-            "FizzBuzz\\": "src",
-            "FizzBuzz\\Test\\": "tests"
-        }
+  "name": "codium/fizz-buzz",
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.3"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "FizzBuzz\\": "src",
+      "FizzBuzz\\Test\\": "tests"
     }
+  }
 }
