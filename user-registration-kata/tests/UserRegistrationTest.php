@@ -2,13 +2,14 @@
 
 namespace UserRegistration\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use UserRegistration\UserRegistration;
 
 class UserRegistrationTest extends TestCase
 {
-    /** @test */
-    public function xxx()
+    #[Test]
+    public function xxx(): void
     {
         $userRegistration = new UserRegistration();
 
