@@ -40,7 +40,7 @@ function validateDocker() {
 
 validateDocker
 
-validateKata "run web page generator kata" "cd fizz-buzz" "make"
+validateKata "run fizz-buzz" "cd fizz-buzz" "make"
 validateKata "run roman-numerals" "cd roman-numerals" "make"
 validateKata "run password-validator" "cd password-validator" "make"
 validateKata "run user-registration" "cd user-registration-kata" "make"
