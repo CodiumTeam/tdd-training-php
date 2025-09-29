@@ -1,43 +1,25 @@
-default:
-	@printf "$$HELP"
+UID:=$(shell id -u)
+GID:=$(shell id -g)
+PWD:=$(shell pwd)
+DOCKER_RUN_CMD:=docker run -t --rm -v $(PWD):/code -u $(UID):$(GID) codiumteam/tdd-training-php
+default: docker-tests
 
-# Local commands
-dependencies:
+vendor: composer.lock
 	composer install
+	@touch vendor
+
 .PHONY: tests
-tests:
-	./vendor/bin/phpunit
+tests: vendor
+	composer run test
+
 .PHONY: coverage
 coverage:
-	./vendor/bin/phpunit --coverage-html coverage
-mutants:
-	./vendor/bin/infection
+	composer run test -- --coverage-html coverage
 
-# Docker commands
-docker-build:
-	docker build -t php-docker-bootstrap .
-	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap make dependencies
-
+.PHONY: docker-tests
 docker-tests:
-	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap make tests
+	@$(DOCKER_RUN_CMD) make tests
+
+.PHONY: docker-coverage
 docker-coverage:
-	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap make coverage
-docker-mutants:
-	@docker run --rm -v $(shell pwd):/opt/project php-docker-bootstrap phpdbg -qrr ./vendor/bin/infection
-
-define HELP
-# Local commands
-	- make dependencies\tInstall the dependencies using composer
-	- make tests\t\tRun the tests
-	- make coverage\t\tRun the code coverage
-	- make mutants\t\tRun the infection mutant testing
-# Docker commands
-	- make docker-build\tCreates a PHP image with xdebug and install the dependencies
-	- make docker-tests\tRun the tests on docker
-	- make docker-coverage\tRun the code coverage
-	- make docker-mutants\t\tRun the infection mutant testing on docker
- Please execute "make <command>". Example make help
-
-endef
-
-export HELP
+	@$(DOCKER_RUN_CMD) make coverage
