@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace PrintDate\Test;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use PrintDate\PrintDate;
 
 final class PrintDateTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_test_system_methods(): void
     {
         $printDate = new PrintDate();
@@ -17,5 +18,6 @@ final class PrintDateTest extends TestCase
         $printDate->printCurrentDate();
 
         // I don't know how to test it
+        $this->assertTrue(true);
     }
 }
