@@ -52,6 +52,17 @@ class UserRegistrationTest extends TestCase
 
         $this->userRegistration->register("an@email.com", "passwo_1");
     }
+    #[Test]
+    public function user_is_not_persisted_when_password_does_not_contain_an_underscore(): void
+    {
+        $this->idGenerator->method("generate")
+            ->willReturn(123);
+
+        $this->userRepository->expects($this->never())
+            ->method('save');
+
+        $this->userRegistration->register("an@email.com", "password13");
+    }
 
     protected function setUp(): void
     {
