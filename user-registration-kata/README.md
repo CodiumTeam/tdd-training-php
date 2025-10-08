@@ -4,6 +4,9 @@
 Create the functionality using Unit tests and test doubles.
 
 ## Requirements
+Implement a method that has this signature:
+    `public void register(String email, String password)`
+
 Part 1
 - Validate that the user is persisted
 - A userId is randomly generated
