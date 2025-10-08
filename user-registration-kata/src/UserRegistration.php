@@ -13,6 +13,9 @@ class UserRegistration
 
     public function register(string $email, string $password): void
     {
+        if ($this->userRepository->findByEmail($email)) {
+            return;
+        }
         $id = $this->idGenerator->generate();
         $this->userRepository->save(new User($id, $email, $password));
     }

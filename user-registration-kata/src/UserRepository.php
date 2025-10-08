@@ -10,4 +10,9 @@ class UserRepository
     {
 
     }
+
+    public function findByEmail(string $email): ?User
+    {
+        return null;
+    }
 }
