@@ -13,7 +13,7 @@
   "autoload": {
     "psr-4": {
       "UserRegistration\\": "src",
-      "UserRegistration\\Test\\": "tests"
+      "UserRegistration\\Tests\\": "tests"
     }
   }
 }
