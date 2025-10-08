@@ -13,7 +13,7 @@ class UserRegistration
 
     public function register(string $email, string $password): void
     {
-        if ($this->userRepository->findByEmail($email)) {
+        if ($this->userRepository->findByEmail($email) || strlen($password) <= 8) {
             return;
         }
         $id = $this->idGenerator->generate();
