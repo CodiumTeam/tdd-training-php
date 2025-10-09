@@ -5,6 +5,7 @@ namespace UserRegistration\Tests;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use UserRegistration\IdGenerator;
+use UserRegistration\PasswordValidator;
 use UserRegistration\User;
 use UserRegistration\UserRegistration;
 use UserRegistration\UserRepository;
@@ -69,6 +70,6 @@ class UserRegistrationTest extends TestCase
         parent::setUp();
         $this->userRepository = $this->createMock(UserRepository::class);
         $this->idGenerator = $this->createStub(IdGenerator::class);
-        $this->userRegistration = new UserRegistration($this->userRepository, $this->idGenerator);
+        $this->userRegistration = new UserRegistration($this->userRepository, $this->idGenerator, new PasswordValidator());
     }
 }
